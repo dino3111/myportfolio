@@ -12,26 +12,34 @@ const projects = {
   elevate: {
     site: 'https://pei-elevate.github.io/elevate-site/',
     repo: 'https://github.com/pei-elevate',
-    stack: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Docker', 'Nginx', 'Authentik'],
   },
   easyspot: {
     repo: 'https://github.com/dino3111/projIES_EasySpot',
-    stack: ['Docker', 'Docker Compose', 'Authentik', 'Make', 'Java'],
   },
 }
 
-// Friendly names for repos in the GitHub grid. Anything not listed shows its repo name.
-export const repoInfo = {
-  projRS_CDN: { kind: 'project', pt: 'CDN com cache em disco e Redis', en: 'CDN with disk and Redis caching' },
-  projectMPEI: { kind: 'project', pt: 'Detetor de phishing em URLs', en: 'Phishing URL detector' },
-  project2AED_TADGraph: { kind: 'project', pt: 'TAD Grafo em C', en: 'Graph ADT in C' },
-  project1AED_TADImageRGB: { kind: 'project', pt: 'Imagens com cor indexada em C', en: 'Indexed-colour images in C' },
-}
+// "Other Projects": four big cards; everything else is one link to GitHub.
+// elevate and EasySpot live in Projects above.
+const gh = (repo) => `https://github.com/${repo}`
+export const repos = [
+  { course: 'TQS', lang: 'Java', url: gh('barkito-tqs/barkito'),
+    pt: { name: 'Barkito', text: 'Plataforma de frota-como-serviço de barcos elétricos partilhados nos canais de uma cidade. Sou o Team Coordinator.' },
+    en: { name: 'Barkito', text: 'Fleet-as-a-service platform for shared electric boats on a city’s canals. I’m the Team Coordinator.' } },
+  { course: 'FBD', lang: 'SQL', url: gh('dino3111/projectFBD_TransportManagement'),
+    pt: { name: 'Gestão de Transportes', text: 'Base de dados para a gestão de transportes da Transportes Ferrão & Martins.' },
+    en: { name: 'Transport Management', text: 'Database for managing the transport operations of Transportes Ferrão & Martins.' } },
+  { course: 'ITW', lang: 'JavaScript', url: gh('dino3111/projectITW'),
+    pt: { name: 'Paris 2024', text: 'Site dos Jogos Olímpicos de Paris 2024: atletas, modalidades, medalhas, recintos e loja.' },
+    en: { name: 'Paris 2024', text: 'A site for the Paris 2024 Olympic Games: athletes, sports, medals, venues and a shop.' } },
+  { course: 'MAS', lang: 'JavaScript', url: gh('dino3111/projectMAS'),
+    pt: { name: 'DoçaRIA', text: 'Marketplace de doçaria tradicional, com produtores, encomendas e um dashboard.' },
+    en: { name: 'DoçaRIA', text: 'A marketplace for traditional sweets, with producers, orders and a dashboard.' } },
+]
 
 export const content = {
   pt: {
     meta: {
-      title: 'Claudino Martins · Engenharia Informática',
+      title: 'Dino',
       description:
         'Portfólio de Claudino Martins, estudante de Engenharia Informática na Universidade de Aveiro. Projetos, experiência e CV.',
     },
@@ -47,18 +55,26 @@ export const content = {
       menuClose: 'Fechar menu',
     },
     hero: {
-      place: 'Aveiro, Portugal',
-      title: 'Claudino Martins',
-      lead: 'No último ano da Licenciatura em Engenharia Informática na Universidade de Aveiro, a terminar em 2027. A ganhar experiência em engenharia de software e desenvolvimento full-stack através das aulas e de projetos. Muito motivado para continuar a aprender e aprofundar o conhecimento prático.',
+      role: 'Finalista de Engenharia Informática',
+      tagline: 'Aveiro, Portugal',
+      // the line break is where the name wraps on the cover
+      title: 'Claudino José\nMartins',
       cv: 'Descarregar CV',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       photoAlt: 'Claudino Martins, de t-shirt branca e braços cruzados',
     },
+    statement: {
+      label: 'Sobre mim',
+      // <b> marks the one word that turns to the accent colour
+      text: 'Estou no último ano da Licenciatura em Engenharia Informática na Universidade de Aveiro, a terminar em 2027. A ganhar experiência em engenharia de software e desenvolvimento <b>full-stack</b> através das aulas e de projetos. Muito motivado para continuar a aprender e aprofundar o conhecimento prático.',
+    },
     projects: {
       title: 'Projects',
       site: 'Ver microsite',
       repo: 'Ver no GitHub',
+      prev: 'Projeto anterior',
+      next: 'Projeto seguinte',
       items: [
         {
           id: 'elevate',
@@ -86,7 +102,7 @@ export const content = {
       now: 'presente',
       groups: [
         {
-          title: 'Experiência profissional',
+          title: 'Experiência Profissional',
           orgs: [
             {
               org: 'Transportes Ferrão & Martins, Lda',
@@ -139,22 +155,20 @@ export const content = {
       ],
     },
     repos: {
-      title: 'More code on GitHub',
-      sub: 'Repositórios de outros projetos e das aulas.',
-      kinds: { project: 'Projeto', class: 'Aulas' },
+      title: 'Other Projects',
+      sub: 'Mais trabalhos de grupo da licenciatura.',
+      more: 'Mais projetos e o trabalho das aulas estão no meu GitHub.',
       all: 'Ver todos os repositórios',
-      error: 'Não deu para carregar os repositórios agora.',
-      loading: 'A carregar repositórios…',
     },
     contact: {
-      title: 'Let’s talk',
+      title: 'Let’s Talk…',
       cv: 'Descarregar CV',
     },
   },
 
   en: {
     meta: {
-      title: 'Claudino Martins · Informatics Engineering',
+      title: 'Dino',
       description:
         'Portfolio of Claudino Martins, Informatics Engineering student at the University of Aveiro. Projects, experience and CV.',
     },
@@ -170,18 +184,25 @@ export const content = {
       menuClose: 'Close menu',
     },
     hero: {
-      place: 'Aveiro, Portugal',
-      title: 'Claudino Martins',
-      lead: 'Currently in my final year of a Bachelor’s degree in Informatics Engineering at Universidade de Aveiro, graduating in 2027. Developing expertise in software engineering and full-stack development through academic coursework and projects. Highly motivated to continuously learn and deepen practical knowledge.',
+      role: 'Final-year Informatics Engineering student',
+      tagline: 'Aveiro, Portugal',
+      // the line break is where the name wraps on the cover
+      title: 'Claudino José\nMartins',
       cv: 'Download CV',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       photoAlt: 'Claudino Martins in a white t-shirt with arms crossed',
     },
+    statement: {
+      label: 'About me',
+      text: 'Currently in my final year of a Bachelor’s degree in Informatics Engineering at Universidade de Aveiro, graduating in 2027. Developing expertise in software engineering and <b>full-stack</b> development through academic coursework and projects. Highly motivated to continuously learn and deepen practical knowledge.',
+    },
     projects: {
       title: 'Projects',
       site: 'Visit microsite',
       repo: 'View on GitHub',
+      prev: 'Previous project',
+      next: 'Next project',
       items: [
         {
           id: 'elevate',
@@ -209,7 +230,7 @@ export const content = {
       now: 'present',
       groups: [
         {
-          title: 'Work experience',
+          title: 'Work Experience',
           orgs: [
             {
               org: 'Transportes Ferrão & Martins, Lda',
@@ -226,7 +247,7 @@ export const content = {
           ],
         },
         {
-          title: 'Student associations',
+          title: 'Student Associations',
           orgs: [
             {
               org: 'AETTUA',
@@ -262,15 +283,13 @@ export const content = {
       ],
     },
     repos: {
-      title: 'More code on GitHub',
-      sub: 'Repositories from other projects and from classes.',
-      kinds: { project: 'Project', class: 'Classes' },
+      title: 'Other Projects',
+      sub: 'More group work from my degree.',
+      more: 'More projects and my class work are on my GitHub.',
       all: 'See all repositories',
-      error: 'Could not load repositories right now.',
-      loading: 'Loading repositories…',
     },
     contact: {
-      title: 'Let’s talk',
+      title: 'Let’s Talk…',
       cv: 'Download CV',
     },
   },

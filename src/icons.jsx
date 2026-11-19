@@ -36,6 +36,10 @@ export function Icon({ name, size = 18 }) {
     moon: 'M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z',
     menu: 'M4 7h16M4 12h16M4 17h16',
     close: 'M6 6l12 12M18 6 6 18',
+    left: 'M15 6l-6 6 6 6',
+    right: 'M9 6l6 6-6 6',
+    play: 'M8 5v14l11-7z',
+    pause: 'M8 5v14M16 5v14',
     pin: 'M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
   }
   return (
