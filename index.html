@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claudino Martins · Engenharia Informática</title>
+    <meta name="description" content="Portfólio de Claudino Martins, estudante de Engenharia Informática na Universidade de Aveiro. Projetos, experiência e CV." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Claudino Martins · Informatics Engineering" />
+    <meta property="og:description" content="Projects, experience and CV of Claudino Martins, University of Aveiro." />
+    <meta property="og:image" content="https://dino3111.github.io/myportfolio/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Set the theme before first paint so there is no flash.
+      try {
+        var t = localStorage.getItem('theme')
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = t
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
