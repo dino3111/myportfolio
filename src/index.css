@@ -305,7 +305,8 @@ button.icon-link { cursor: pointer; padding: 0; }
 }
 
 /* Other projects: four big cards, then a compact list */
-.repo-grid { list-style: none; padding: 0; margin: 0 0 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+/* auto-fill: three across on a wide screen, so new projects slot in without layout changes */
+.repo-grid { list-style: none; padding: 0; margin: 0 0 56px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
 .repo-grid li { display: flex; }
 .repo {
   position: relative; flex: 1; display: flex; flex-direction: column; gap: 12px; padding: clamp(28px, 3vw, 40px); overflow: hidden;
@@ -319,9 +320,9 @@ button.icon-link { cursor: pointer; padding: 0; }
 .repo-course { color: var(--accent-ink); font-weight: 500; }
 .repo-lang { display: inline-flex; align-items: center; gap: 6px; }
 .repo-lang i { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
-.repo-name { color: var(--ink); font-weight: 600; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15; letter-spacing: -0.035em; }
-.repo-desc { font-size: 17px; line-height: 1.55; max-width: 46ch; }
-.repo-link { margin-top: auto; padding-top: 12px; display: inline-flex; align-items: center; gap: 4px; color: var(--mute); font-size: 12px; overflow-wrap: anywhere; }
+.repo-name { color: var(--ink); font-weight: 600; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.15; letter-spacing: -0.035em; }
+.repo-desc { font-size: 16px; line-height: 1.55; }
+.repo-link { margin-top: auto; padding-top: 12px; display: inline-flex; align-items: center; gap: 6px; color: var(--mute); font-size: 15px; font-weight: 500; }
 .repo-link svg { flex: none; transition: transform 0.15s; }
 .repo:hover .repo-link { color: var(--ink); }
 .repo:hover .repo-link svg { transform: translate(2px, -2px); }

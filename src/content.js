@@ -18,7 +18,7 @@ const projects = {
   },
 }
 
-// "Other Projects": four big cards; everything else is one link to GitHub.
+// "Other Projects": one big card each (add new ones here); everything else is one link to GitHub.
 // elevate and EasySpot live in Projects above.
 const gh = (repo) => `https://github.com/${repo}`
 export const repos = [
@@ -28,12 +28,9 @@ export const repos = [
   { course: 'FBD', lang: 'SQL', url: gh('dino3111/projectFBD_TransportManagement'),
     pt: { name: 'Gestão de Transportes', text: 'Base de dados para a gestão de transportes da Transportes Ferrão & Martins.' },
     en: { name: 'Transport Management', text: 'Database for managing the transport operations of Transportes Ferrão & Martins.' } },
-  { course: 'ITW', lang: 'JavaScript', url: gh('dino3111/projectITW'),
-    pt: { name: 'Paris 2024', text: 'Site dos Jogos Olímpicos de Paris 2024: atletas, modalidades, medalhas, recintos e loja.' },
-    en: { name: 'Paris 2024', text: 'A site for the Paris 2024 Olympic Games: athletes, sports, medals, venues and a shop.' } },
-  { course: 'MAS', lang: 'JavaScript', url: gh('dino3111/projectMAS'),
-    pt: { name: 'DoçaRIA', text: 'Marketplace de doçaria tradicional, com produtores, encomendas e um dashboard.' },
-    en: { name: 'DoçaRIA', text: 'A marketplace for traditional sweets, with producers, orders and a dashboard.' } },
+  { course: 'SO', lang: 'C', url: gh('dino3111/project2SO_WebServerMultiThread'),
+    pt: { name: 'Servidor HTTP Concorrente', text: 'Servidor HTTP/1.1 em C com vários processos e threads, IPC POSIX, cache LRU e logs no formato Apache.' },
+    en: { name: 'Concurrent HTTP Server', text: 'HTTP/1.1 server in C with worker processes and threads, POSIX IPC, an LRU cache and Apache-style logs.' } },
 ]
 
 export const content = {
@@ -158,6 +155,7 @@ export const content = {
       title: 'Other Projects',
       sub: 'Mais trabalhos de grupo da licenciatura.',
       more: 'Mais projetos e o trabalho das aulas estão no meu GitHub.',
+      view: 'Ver no GitHub',
       all: 'Ver todos os repositórios',
     },
     contact: {
@@ -286,6 +284,7 @@ export const content = {
       title: 'Other Projects',
       sub: 'More group work from my degree.',
       more: 'More projects and my class work are on my GitHub.',
+      view: 'View on GitHub',
       all: 'See all repositories',
     },
     contact: {

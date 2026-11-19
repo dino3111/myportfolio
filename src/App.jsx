@@ -412,7 +412,7 @@ function Repos({ t, lang }) {
                 </span>
                 <span className="repo-name">{r[lang].name}</span>
                 <span className="repo-desc">{r[lang].text}</span>
-                <span className="repo-link mono" translate="no">{r.url.replace('https://github.com/', '')} <Icon name="arrow" size={14} /></span>
+                <span className="repo-link">{t.view} <Icon name="arrow" size={14} /></span>
               </a>
             </li>
           ))}
