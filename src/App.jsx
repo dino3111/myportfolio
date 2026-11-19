@@ -103,16 +103,13 @@ function Hero({ t }) {
             <a className="btn btn-primary" href={links.cv} download>
               <Icon name="download" /> {t.cv}
             </a>
-            <a className="btn btn-secondary" href={links.github} target="_blank" rel="noreferrer">
-              <GithubIcon size={18} /> {t.github}
+            <a className="icon-link" href={links.github} target="_blank" rel="noreferrer" aria-label={t.github} title={t.github}>
+              <GithubIcon size={20} />
+            </a>
+            <a className="icon-link" href={links.linkedin} target="_blank" rel="noreferrer" aria-label={t.linkedin} title={t.linkedin}>
+              <LinkedinIcon size={20} />
             </a>
           </div>
-          <a className="now" href="#elevate">
-            <span className="now-dot" aria-hidden="true" />
-            <span className="now-label mono">{t.now}</span>
-            <span className="now-text">{t.nowText}</span>
-            <Icon name="arrow" size={16} />
-          </a>
         </div>
         <figure className="hero-photo">
           <img
