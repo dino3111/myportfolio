@@ -36,7 +36,7 @@ export const repos = [
 export const content = {
   pt: {
     meta: {
-      title: 'Dino',
+      title: 'Dino Portfolio',
       description:
         'Portfólio de Claudino Martins, estudante de Engenharia Informática na Universidade de Aveiro. Projetos, experiência e CV.',
     },
@@ -166,7 +166,7 @@ export const content = {
 
   en: {
     meta: {
-      title: 'Dino',
+      title: 'Dino Portfolio',
       description:
         'Portfolio of Claudino Martins, Informatics Engineering student at the University of Aveiro. Projects, experience and CV.',
     },
