@@ -159,7 +159,7 @@ export const content = {
       all: 'Ver todos os repositórios',
     },
     contact: {
-      title: 'Let’s Talk…',
+      title: 'Let’s talk…',
       cv: 'Descarregar CV',
     },
   },
@@ -288,7 +288,7 @@ export const content = {
       all: 'See all repositories',
     },
     contact: {
-      title: 'Let’s Talk…',
+      title: 'Let’s talk…',
       cv: 'Download CV',
     },
   },
